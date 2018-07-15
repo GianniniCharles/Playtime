@@ -9,10 +9,8 @@
 function reverse(str) {
 
 let arrayOfCharacters = str.split('');
-let reversedArrayOfCharacters = arrayOfCharacters.reverse();
-let reversedString = reversedArrayOfCharacters.join(''); 
-
-return reversedString;
+arrayOfCharacters.reverse();
+return arrayOfCharacters.join(''); 
 }
 
 module.exports = reverse;
