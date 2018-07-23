@@ -6,12 +6,11 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+
 function reverse(str) {
-  let reversed = '';
-  for (let character of str) {
-    reversed = character + reversed;
-  }
-  return reversed;
+  //ES6 Advanced Way
+return str.split('').reduce((reversed, character) => 
+   character + reversed, '');
 }
 
 module.exports = reverse;
@@ -21,3 +20,22 @@ module.exports = reverse;
     // return str.split('')
     // .reverse()
     // .join('');
+
+
+
+  //Another Solution
+  // let reversed = '';
+  // for (let character of str) {
+  //   reversed = character + reversed;
+  // }
+  // return reversed;
+
+
+  // ES5 advanced way
+  // return str.split('').reduce((reversed, character)=>{ 
+  //   return character + reversed;
+  //  }, '') 
+
+   //reduce will take starting argument, pass into arrow function, whatever gets passed first into reduce will be reversed string,
+        //second is element we run on in array.
+   //take values in array and condense to a single string value.
