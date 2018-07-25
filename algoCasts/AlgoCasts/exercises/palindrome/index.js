@@ -7,6 +7,28 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
 
-module.exports = palindrome;
+//not as nice solution due to extra work.
+
+function palindrome(str) {
+return str.split('').every((char, i)=> { //.every checks everything. str.le
+  return char === str[str.length -i -1]; //talk about how this solution is not as optimal because it is double the work for the same result. str[str.length -i gets the other side of the potential palindrome, -1 compensates for zero index.]
+});
+
+
+
+
+
+} 
+
+
+// Straightfoward method
+
+// function palindrome(str) {
+  // return str === str.split('').reverse().join('');
+  
+  // }
+
+
+
+  module.exports = palindrome;

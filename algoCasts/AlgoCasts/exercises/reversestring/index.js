@@ -6,12 +6,20 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-
+// Debugger Statements
 function reverse(str) {
-  //ES6 Advanced Way
-return str.split('').reduce((reversed, character) => 
-   character + reversed, '');
-}
+  return str.split('').reduce((rev, char) => char + rev, '');
+  }
+  
+
+
+
+// function reverse(str) {
+//   //ES6 Advanced Way
+
+// return str.split('').reduce((rev, char) => 
+//    char + rev, '');
+// }
 
 module.exports = reverse;
 
