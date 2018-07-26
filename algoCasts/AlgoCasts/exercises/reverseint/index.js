@@ -16,7 +16,8 @@ function reverseInt(n) {
   .reverse()
   .join('');
 
-  return parseInt(reversed) * Math.sign(n);
+  return parseInt(reversed) * Math.sign(n) //more refined, automatically changes the sign at the end based on n's original sign.
+  //the original sign was lost during the parseInt.;
 }
 
 
