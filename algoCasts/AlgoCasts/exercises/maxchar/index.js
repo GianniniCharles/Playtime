@@ -8,20 +8,29 @@
 
 
 
+// Refined solution:
+//Main difference vs mine: They used a separatre for in loop 
+//to check the char map for the most common substring
+function maxChar(str) {
+  const charMap = {};
+  let max = 0;
+  let maxChar = '';
 
-// function maxChar(str) {
-//   const charMap = {};
+  for (let char of str) {
+      chars[char] = chars[char]+1 || 1;
+  }
 
-//   //This makes a characterMap to represent our string
-//   for(let char of str) {
-//     if (charMap[char]) {
-//       charMap[char]++;
-//     } else {
-//       charMap[char] = 1;
-//     }
-//   }
-// console.log(charMap);
-// }
+  //Loops INSIDE of the completed object using the keys
+  for (let char in charMap){
+    if (charMap[char] > max) {
+      max = charMap[char];
+      maxChar = char;
+    }
+  }
+
+
+console.log(charMap);
+}
 
 
 
@@ -44,7 +53,7 @@ module.exports = maxChar;
 //   const chars = {};
 
 // for (let char of str) {
-//   chars[char] = chars[char]+1 || 1
+//   chars[char] = chars[char]+1 || 1;
 //   if (chars[char] > substringFrequency) {
 //     mostCommonSubstring = char;
 //     substringFrequency = chars[char]
