@@ -12,24 +12,46 @@
 //   4
 //   buzz
 
-//most restrictive condition first so that loop doesn't skip it once it finds another true condition
+
+//refined solution
 function fizzBuzz(n) {
   for(let i = 1; i <= n; i++){
     if (i % 3 === 0 && i % 5 === 0) {
       console.log('fizzbuzz');
-      continue;
     } else if (i % 5 === 0) {
       console.log('buzz');
-      continue;
     } else if (i % 3 === 0) {
       console.log('fizz');
-      continue;
+    } else {
+      console.log(i);
     }
-    console.log(i)
-
   }
 
 
   }
 
 module.exports = fizzBuzz;
+
+
+
+// my solution 
+//most restrictive condition first so that loop doesn't skip it once it finds another true condition
+
+// function fizzBuzz(n) {
+//   for(let i = 1; i <= n; i++){
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('fizzbuzz');
+//       continue;
+//     } else if (i % 5 === 0) {
+//       console.log('buzz');
+//       continue;
+//     } else if (i % 3 === 0) {
+//       console.log('fizz');
+//       continue;
+//     }
+//     console.log(i)
+
+//   }
+
+
+//   }
