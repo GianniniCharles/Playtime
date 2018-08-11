@@ -1,6 +1,7 @@
-const theCorrectPassword = "blah";
+const theCorrectPassword = "hackable";
 const passwordAttempt = prompt("What is the password?");
 let coolThing = document.getElementById('theGoodStuff');
+coolThing.style.display ="none";
 
 passwordAttempt.confirm
 
@@ -9,19 +10,19 @@ console.log('page activated');
  function getTheGoodStuff(){
 
 
-console.log('CORRECT PASSWORD =',theCorrectPassword);
-console.log('ATTEMPTED PASSWORD =',passwordAttempt);
+coolThing.style.display = "block";
 
+    if (passwordAttempt === theCorrectPassword){
+      console.log('password is correct');
+      coolThing.style.display="block";
 
-
-
-
-
-  console.log('buttonclicked');
-    if (coolThing.style.display === "none"){
-      coolThing.style.display = "block";
     } else {
+      console.log('that is the WRONG password');
     coolThing.style.display = "none";
+    
+    location.reload();
+    
+
     }
 
   }
