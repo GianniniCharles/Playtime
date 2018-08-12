@@ -10,8 +10,6 @@ console.log('page activated');
  function getTheGoodStuff(){
 
 
-coolThing.style.display = "block";
-
     if (passwordAttempt === theCorrectPassword){
       console.log('password is correct');
       coolThing.style.display="block";
