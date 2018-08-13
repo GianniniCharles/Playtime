@@ -8,6 +8,74 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// My solution: Formed with help
+function anagrams(stringA, stringB) {
+  let charMapA = makeACharMap(stringA);
+  let charMapB = makeACharMap(stringB);
+
+  
+
+  //checking to see if they have the same letters. Auto false if they dont.
+  if (Object.keys(charMapA).length !== Object.keys(charMapB).length) {
+   return false
+  } 
+
+//checking to see if the letters are used the same number of times in both.
+  for (let char in charMapA){
+    if (charMapA[char] !== charMapB[char]){
+      return false
+    } else {return true}
+  } //end loop
+
+} //end anagram
+
+
+
+
+
+
+
+
+
+function makeACharMap(str) {
+const charMap = {};
+const theLowerCaseString = str.toLowerCase()
+
+
+  for (let char of theLowerCaseString) {
+      if (
+        char !== 'a'&&
+        char !== 'b'&&
+        char !== 'c'&&
+        char !== 'd'&&
+        char !== 'e'&&
+        char !== 'f'&&
+        char !== 'g'&&
+        char !== 'h'&&
+        char !== 'i'&&
+        char !== 'j'&&
+        char !== 'k'&&
+        char !== 'l'&&
+        char !== 'm'&&
+        char !== 'n'&&
+        char !== 'o'&&
+        char !== 'p'&&
+        char !== 'q'&&
+        char !== 'r'&&
+        char !== 's'&&
+        char !== 't'&&
+        char !== 'u'&&
+        char !== 'v'&&
+        char !== 'w'&&
+        char !== 'x'&&
+        char !== 'y'&&
+        char !== 'z') {continue};
+
+      charMap[char] = charMap[char]+1 || 1;
+  }
+
+  //Loops INSIDE of the completed object using the keys
+  return charMap;
+}
 
 module.exports = anagrams;
