@@ -8,6 +8,9 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
+
+//Today I reviewed anagrams.
+
 // Teacher solution 2: Uses regex and compares two solutions
 function anagrams(stringA, stringB) {
   return cleanMyString(stringA) === cleanMyString(stringB);

@@ -17,6 +17,20 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
 
 module.exports = steps;
+//NOT A SOLUTION
+// //this gets the # signs, but not the space
+// function steps(n) {
+//   let staircase = ''
+  
+//   for (let i = 0; i<n;i++){
+//   staircase+= '#';
+  
+//   console.log(staircase)
+//   }//end loop
+  
+  
+  
+//   return staircase;
+//   }
