@@ -42,7 +42,7 @@
           stair += ' ';
         }
       }
-      console.log(stair);
+      console.log(stair);oe
     }
   }
 module.exports = steps;
