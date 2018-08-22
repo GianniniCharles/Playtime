@@ -35,8 +35,8 @@ function fizzBuzz(n){
       console.log(i);
     }
   }
-
 }
+
 
 stairCase();
 fizzBuzz(16);
