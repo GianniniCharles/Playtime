@@ -31,20 +31,27 @@
 
 
   //I KNOW THIS HAS BAD TIME COMPLEXITY. A BETTER SOLUTION MAY BE FOUND ONE DAY.
-  function steps(n) {
-    for (let row = 0; row <n; row++){
-      let stair = '';
+ //Base cases: Put them as argumentes and they will work between the function calls.
+function steps(n, row = 0, stair = '') {
+  if (n === row) {
+    return;
+  }//ends function if n === row. 
 
-      for (let column = 0; column<n; column++){
-        if (column <= row){
-          stair += '#';
-        } else {
-          stair += ' ';
-        }
-      }
-      console.log(stair);
-    }
+  if (stair.length === n){
+    console.log(stair);
+    return steps(n, row + 1)
+  }//This is the case that triggers at the end of a row. Each row has n length. 
+  //the first row (row 0) will have 1 #and n-1 spaces. He visualized a grid when he logiced his way through the problem.
+
+  //SOLVING PROBLEMS. #1. Logic your way through it.
+  //#2. Code through it.
+  if (stair.length <= row) {
+    stair += '#'
+  } else {
+    stair += ' ';
   }
+  steps(n, row, stair);
+}
 module.exports = steps;
 //NOT A SOLUTION
 // //this gets the # signs, but not the space
