@@ -32,7 +32,6 @@ function Square(props) {
 // }
 
 class Board extends React.Component {
-
   //like js, a constructor for subclass uses super
   //The constructors in React keep track of state
     renderSquare(i) {
@@ -72,9 +71,12 @@ class Game extends React.Component {
   constructor(props) { //open constructor
     super(props);
     this.state = { //open state
-      history: [{ //open history
+      history: [
+        { //open history
         squares: Array(9).fill(null)
-      }],//close history
+      }
+    ],//close history
+      stepNumber: 0,
       xIsNext: true
     }; //close state
   } //close constructor.
@@ -94,7 +96,7 @@ class Game extends React.Component {
       }
     ]),
       stepNumber: history.length,
-      xIsNext: !this.state.xIsNext,
+      xIsNext: !this.state.xIsNext
     }); //close set state
   }//close handleClick
 
