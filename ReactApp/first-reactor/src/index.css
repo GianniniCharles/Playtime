@@ -22,15 +22,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 70px;
+  font-size: 1.4em;
   font-weight: bold;
   line-height: 34px;
-  height: 90px;
+  height: 10vh;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 90px;
+  width: 10vh;
 }
 
 .square:hover {
