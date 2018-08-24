@@ -17,19 +17,28 @@ ol, ul {
   margin-bottom: 10px;
 }
 
+/* 68 */
 .square {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 70px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 90px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 90px;
+}
+
+.square:hover {
+  background-color: blue;
+}
+
+.square:active {
+  background-color: red;
 }
 
 .square:focus {
