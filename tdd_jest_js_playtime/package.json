@@ -1,0 +1,16 @@
+{
+  "name": "tdd_jest_js_playtime",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.1.0"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "description": ""
+}
