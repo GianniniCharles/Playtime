@@ -10,6 +10,10 @@
       <li>Pies</li>
     </ul>
   </nav>
-<div id = "page">
-<router-outlet></router-outlet>
+
+
+
+
+<div id = "page" class="routeContainer" [@routeAnimation]="getDepth(myOutlet)">
+<router-outlet #myOutlet="outlet"></router-outlet>
 </div>

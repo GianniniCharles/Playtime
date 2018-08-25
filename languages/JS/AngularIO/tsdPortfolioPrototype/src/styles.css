@@ -68,3 +68,18 @@ background: linear-gradient(black,#FFFFFF);
   width: 100vw;
   background-color: blue;
 }
+
+
+
+router-outlet {
+  display:none;
+}
+
+.routeContainer {
+  position: relative;
+}
+
+
+.routeContainer>* {
+  display: block;
+}
