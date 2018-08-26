@@ -22,20 +22,22 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 1.4em;
+  font-size: 5em;
   font-weight: bold;
   line-height: 34px;
-  height: 10vh;
+  height: 25vh;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 10vh;
+  width: 20vw;
 }
 
-.square:hover {
+
+
+/* .square:hover {
   background-color: blue;
-}
+} */
 
 .square:active {
   background-color: red;
@@ -51,9 +53,16 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-top: 2vh;
+  text-align: center;
+}
+
+.game-info ol{
+  position: relative;
+  right: 5%;
 }
