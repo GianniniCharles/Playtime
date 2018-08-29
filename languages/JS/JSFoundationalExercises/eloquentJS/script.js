@@ -59,44 +59,68 @@ Pseudo code:
 
 */
 
+//I DID IT! IT WORKS ON ANY EVEN NUMBER. It doesn't work well on an odd number, but what chessboard is 9x9?
 
-function chessboard(size){
+function chessBoard(size) {
   let theChessBoard = '';
+  let numOfIterations = (size**2);
   let line = 0;
-  for (let i =0; i < size**2; i++){
+  let insertToken = '';
 
-     if (line === size) {
+
+  //prevents odd numbers from messing up the alignment of the squares.
+
+  if (size % 2 !==0) {
+    return "The length of the grid must be an even number"
+  }
+
+  console.log(`Your chessboard will have a length of ${size}, a width of ${size}, and an area of ${size**2} units.`)
+
+//I learned the substring method to help me win here!
+
+//Single Loop Solution: Guides Exactly What happens each iteration.
+  for (let i = 0; i < (numOfIterations);i++){
+
+//Line logic: Creates a new line when length reached, increments iteration, and resets the line limit.
+    if (line === size) {
       theChessBoard += '\n'
+      numOfIterations++;
       line = 0;
-    } //end conditional
-
-
-    if (theChessBoard[i - 1] === '\n') {
-      theChessBoard += theChessBoard[i - 2];
       continue;
-    
+    } //end conditional 1
+
+//Ensures that the last character from the previous line is also used to start the current line. This logic gives the chessboard effect. 
+    if (theChessBoard.substring((i - 1), i) === '\n') {
+      theChessBoard+= theChessBoard.substring((i-2),(i-1));
+      line++;
+      continue;
     }
 
-    if (theChessBoard[i - 1] === undefined || theChessBoard[i] === '#') {
-      theChessBoard += ' ';
-    } 
 
-    if (theChessBoard[i - 1] === ' ') {
-      theChessBoard += '#';
-    } 
-
-    // if (theChessBoard[i])
-  
+  //Starts off with the first character and watches for the second character.
+    if (theChessBoard.substring((i - 1), i) === '#' || theChessBoard.substring((i - 1), i) === '') {
+      theChessBoard+= ' ';
+      line++;
+      continue;
+    }
 
 
-  line++;
-  console.log(theChessBoard[i])
+//watches for the first character to insert the second one.
+     if (theChessBoard.substring((i - 1), i) === ' ') {
+      theChessBoard+= '#';
+      line++;
+      continue;
 
-   
-  } //end loop
+    }
 
+    
+
+
+  } //end for loop
 
 console.log(theChessBoard);
-} //end function
 
-chessboard(8);
+} //end function chessBoard
+
+//argument that enables a chessboard of any size.
+chessBoard(8);
