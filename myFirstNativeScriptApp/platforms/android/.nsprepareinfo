@@ -1,0 +1,22 @@
+{
+	"time": "Wed Aug 29 2018 22:34:55 GMT-0400 (Eastern Daylight Time)",
+	"nativePlatformStatus": "3",
+	"bundle": false,
+	"release": false,
+	"changesRequireBuild": true,
+	"projectFileHash": "6eb11fb4c51c5b8fff2715baf7e50285c3d86ee6149cf30b1dbec31bbbd229d1",
+	"changesRequireBuildTime": "Wed Aug 29 2018 22:34:55 GMT-0400 (Eastern Daylight Time)",
+	"appFilesHashes": {
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/README.md": "085244a5f4cd2f770feb3ab993bd6a4570189875",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/app.component.js": "3201cce9d4dfa315bdd5757e72122b786a96b33e",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/app.component.ts": "267efb643896e7023d096c448e73464b711bba21",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/app.module.js": "ab115c17bd9cb59b6b4df0951794d9035fc33a51",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/app.css": "4798d38e15c1d512249093e8fb179b752fa17638",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/app.module.ts": "d266e54be8c147839c5c3d77e37a7aa8e9376eca",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/main.ts": "db8a1b28fd0f2991d96784324869e7630e7268ad",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/main.aot.ts": "6077128f62244cc624adb92955f9079da738b7a4",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/main.js": "1e64f06ec4cb461f0b76e13490cc929965dc6a10",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/package.json": "9d2745cc610c07ca0f3e765d324f53b14f1197da",
+		"/Users/cruxis/OneDrive/StableArchive/Coding/Playtime/myFirstNativeScriptApp/app/images/apple.jpg": "c033a7a48829675b73f5d1db5360ffd53a737e01"
+	}
+}
