@@ -1,0 +1,1 @@
+8/29/18: Today, I am working on a private repository for a senior developer. His project is hosted on Bitbucket. This project has to do with Native app development written in NativeScript. 
