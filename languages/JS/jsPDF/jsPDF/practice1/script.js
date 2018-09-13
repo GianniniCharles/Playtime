@@ -19,10 +19,7 @@ doc.fromHTML($('#testdiv').get(0), 20,20,{
 
 });
 
-
-
-
-
   doc.save('Test2.pdf');
 }  
+
 

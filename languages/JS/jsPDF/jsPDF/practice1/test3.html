@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="jspdf.min.js"></script>
+  <script type="text/javascript" src="html2canvas.js"></script>
+  <script type="text/javascript">
+
+  function genPDF3() {
+  html2canvas(document.body, {
+    onrendered: function(canvas){
+      let img = canvas.toDataURL("image/png");
+      let doc = new jsPDF();
+      doc.addImage(img, 'JPEG',20,20);
+      doc.save('test3.pdf');
+    }
+  })
+
+
+
+}//end genPDF3
+
+ </script>
+
+</head>
+<body>
+
+
+<h1>jsPDF Demos</h1>
+<a href="javascript:genPDF3()">Download PDF</a>
+
+
+<div id="testDiv">
+  <h1> Example Header</h1>
+  <input type="text"/>
+  <input type="submit" value = "button"/>
+  <br><br>
+  <img src="impulse.jpg" width = "600" height="400"/>
+
+</div>
+
+
+
+
+
+
+  
+</body>
+</html>
