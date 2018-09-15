@@ -1,0 +1,124 @@
+{
+  "name": "pdf-lib",
+  "version": "0.3.0",
+  "description": "Library for creating and modifying PDF files in JavaScript",
+  "main": "lib/index.js",
+  "unpkg": "dist/pdf-lib.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --no-coverage --watch",
+    "test:ci": "jest --runInBand --no-coverage",
+    "test:coverage": "jest",
+    "jest:clear-cache": "rm -rf $TMPDIR/jest*",
+    "coverage-report": "open coverage/lcov-report/index.html",
+    "docs": "rm -rf docs && yarn typedoc --options typedoc.js src/",
+    "lint": "yarn prettier --config ./.prettierrc.json --loglevel error --write \"{src,integration-tests,__tests__}/**/*.ts\" && tslint --project ./tsconfig.json --fix",
+    "it:node": "ts-node --module commonjs -r tsconfig-paths/register __integration_tests__/runners/node/index.ts",
+    "it:node:profile": "rm isolate*.log && gulp build-dev && node --prof compiled/lib/__integration_tests__/runners/node/index.js && node --prof-process --preprocess -j isolate*.log | flamebearer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hopding/pdf-lib.git"
+  },
+  "keywords": [
+    "pdf-lib",
+    "pdf",
+    "document",
+    "create",
+    "modify",
+    "creation",
+    "modification",
+    "edit",
+    "editing",
+    "typescript",
+    "javascript",
+    "library"
+  ],
+  "author": "Andrew Dillon <andrew.dillon.j@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hopding/pdf-lib/issues"
+  },
+  "homepage": "https://github.com/Hopding/pdf-lib#readme",
+  "dependencies": {
+    "buffer": "^5.0.8",
+    "fontkit": "git+https://github.com/Hopding/fontkit.git#97eb4f461e849956a595b3e6c8366cd715f71c38",
+    "lodash": "^4.17.4",
+    "pako": "^1.0.6",
+    "png-js": "git+https://github.com/Hopding/png.js.git#9170c1451881487a625fff1cca6de4fd9949cd51",
+    "proxy-polyfill": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/faker": "^4.1.2",
+    "@types/inquirer": "^0.0.41",
+    "@types/jest": "^22.2.2",
+    "@types/lodash": "^4.14.110",
+    "@types/node": "^9.6.0",
+    "@types/pako": "^1.0.0",
+    "chalk": "^2.4.1",
+    "del": "^3.0.0",
+    "faker": "^4.1.0",
+    "gulp": "^3.9.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-typescript": "^4.0.1",
+    "inquirer": "^6.0.0",
+    "jest": "^22.4.3",
+    "jest-junit": "^3.6.0",
+    "prettier": "^1.11.1",
+    "relative": "^3.0.2",
+    "rollup": "^0.60.7",
+    "rollup-plugin-analyzer": "^2.0.3",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^4.0.0",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^6.0.5",
+    "tsconfig-paths": "^3.3.2",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.11.1",
+    "typedoc-plugin-markdown": "^1.1.13",
+    "typescript": "^2.7.2"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "./tsconfig.json"
+      }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/types/"
+    ],
+    "moduleNameMapper": {
+      "^core/(.*)": "<rootDir>/src/core/$1",
+      "^utils/(.*)": "<rootDir>/src/utils/$1",
+      "^utils": "<rootDir>/src/utils/index.ts"
+    },
+    "testResultsProcessor": "./node_modules/jest-junit",
+    "transform": {
+      "^.+$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/integration-tests/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/__tests__/tsconfig.json",
+      "(.*).spec.ts.snap",
+      "PDFOperatorSingletonTest.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ]
+  },
+  "jest-junit": {
+    "output": "./coverage/junit.xml"
+  }
+}
