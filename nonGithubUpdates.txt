@@ -1,1 +1,4 @@
 8/29/18: Today, I am working on a private repository for a senior developer. His project is hosted on Bitbucket. This project has to do with Native app development written in NativeScript. 
+
+
+9/22/18: Today, I am assisting my mother on creating a simple WordPress site for her. I am using Wordpress.org following a Wordpress meetup. You can use the all in one plugin to transfer wordpress layouts and db's apparently. Who knew?
