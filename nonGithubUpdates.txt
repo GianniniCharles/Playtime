@@ -2,3 +2,5 @@
 
 
 9/22/18: Today, I am assisting my mother on creating a simple WordPress site for her. I am using Wordpress.org following a Wordpress meetup. You can use the all in one plugin to transfer wordpress layouts and db's apparently. Who knew?
+
+9/24/18: Working on the Wordpress site amiraperry.com
